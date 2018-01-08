@@ -24,8 +24,6 @@ local debian = require("debian.menu")
 -- Path to themes
 local path_to_themes = "~/.config/awesome/themes/"
 
--- beautiful.useless_gap = dpi(0)
-
 --############################################################
 --------------------------------------------------------------
 
@@ -126,13 +124,6 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "open terminal", terminal }
                                   }
                         })
-------------------------------------------------------------------------------------------
---########################################################################################
-
-
-
---########################################################################################
-------------------------------------------------------------------------------------------
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -212,6 +203,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Each screen has its own tag table.
     -- awful.tag({ "Terminal", "Internet", "Dev", "Terminal 2", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+
     local names = { "Terminal", "Internet", "Dev", "Terminal 2", "Gimp", "6", "7", "8", "9" }
     local l = awful.layout.suit
     local layouts = {l.spiral, l.magnifier, l.spiral, l.magnifier, l.floating, l.floating, l.floating,

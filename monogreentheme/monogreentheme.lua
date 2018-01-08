@@ -1,7 +1,8 @@
--------------------------------
---    "Sky" awesome theme    --
---  By Andrei "Garoth" Thorp --
--------------------------------
+---------------------------------------------------
+--      "Monochromatic Green" awesome theme      --
+--             By Michael Cooney                 --
+--    Built on "Sky" by Andrei "Garoth" Thorp    --
+---------------------------------------------------
 
 local gears = require("gears")
 local awful = require("awful")
@@ -12,18 +13,6 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget 
 local debian = require("debian.menu")
-
-
---#########################################################################
--- User defined stuff
-
--- user_wifi_menu = {
--- 	{ "WiFi Connections", function() terminal .. "-e watch nmcli dev wifi" end },
-
--- user_main_menu = awful.menu({ items = 
-
-
---#########################################################################
 
 
 -- If you want SVGs and extras, get them from garoth.com/awesome/sky-theme
@@ -93,12 +82,13 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 )
 
 -- MISC
-theme.wallpaper             = "~/Pictures/n-o-d-e4.png" -- themes_path .. "sky/sky-background.png"
+images_path = "~/.config/awesome/themes/monogreentheme/images/"
+theme.wallpaper             = images_path .. "n-o-d-e4.png"
 theme.taglist_squares       = "true"
 theme.titlebar_close_button = "true"
 theme.menu_height = dpi(45) -- 15
 theme.menu_width  = dpi(150) -- 100
-images_path = "~/.config/awesome/themes/monogreentheme/images/"
+
 
 -- Define the image to load
 theme.titlebar_close_button_normal = images_path .. "greenCloseButton.png"
@@ -149,8 +139,12 @@ theme.titlebar_floating_button_normal_active = images_path .. "floating_active_n
 theme.titlebar_floating_button_focus_active = images_path .. "floating_active_focus.png"
 --themes_path .. "default/titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = themes_path .. "default/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_inactive = images_path .. "maximize_inactive_normal.png"
+--themes_path .. "default/titlebar/maximized_normal_inactive.png"
+
+theme.titlebar_maximized_button_focus_inactive = images_path .. "maximize_inactive_focus.png"
+--themes_path .. "default/titlebar/maximized_focus_inactive.png"
+
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active = themes_path .. "default/titlebar/maximized_focus_active.png"
 
