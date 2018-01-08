@@ -1,0 +1,7 @@
+## Don't include backup files
+**/*~
+**/*#
+## Don't include gimp xcf files
+**/*.xcf
+
+**/.#*
