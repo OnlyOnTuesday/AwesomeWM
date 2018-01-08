@@ -4,4 +4,4 @@
 ## Don't include gimp xcf files
 **/*.xcf
 
-**/.#*
+.#README.md
